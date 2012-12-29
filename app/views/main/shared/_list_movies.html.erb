@@ -3,7 +3,7 @@
     <h2><%= k %></h2>
     <ul>
     <% v.each do |film| %>
-      <li><%= link_to film[1], film[0] %> : <%= link_to "remind me", "#" %></li>
+      <li><%= link_to film[1], film[0] %> : <%= link_to "remind me", reminders_path, :method => "post" %></li>
     <% end %>
     </ul>
   <% end %>
