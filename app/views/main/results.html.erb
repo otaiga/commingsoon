@@ -1,0 +1,12 @@
+<% @response.each do |f| %>
+  <% f.each_pair do |k, v| %>
+    <h2><%= k %></h2>
+    <ul>
+    <% v.each do |film| %>
+      <li><%= link_to film[1], film[0] %> : <%= link_to "remind me", "#" %></li>
+    <% end %>
+    </ul>
+  <% end %>
+<% end %>
+
+<%= link_to "Back", root_path %>

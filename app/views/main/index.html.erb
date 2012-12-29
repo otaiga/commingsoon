@@ -1,1 +1,9 @@
-<h1> Welcome </h1>
+<h1>Welcome to Coming Soon Reminder</h1>
+
+<p> Search for films for a given date </p>
+<%= form_tag results_path, :method => "get" %>
+<%= select_date(date = Date.current, :order => [:month, :year]) %>
+<%= submit_tag "search" %>
+
+<br>
+<%= link_to "Next Month", results_path(:date => {:month => (Date.today + 1.month).month, :year => (Date.today + 1.month).year} ) %>
