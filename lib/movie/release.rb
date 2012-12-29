@@ -9,6 +9,13 @@ module Movie::Release
     query_hash(clean_values(arranged_keys(doc)), selected_month, selected_year)
   end
 
+  ## Going to try and scrape the movie data.... messy messy
+  def get_movie_bio(id)
+    doc = Nokogiri::HTML(open(IMDB_URL + "/title/" + id))
+    title = doc.css("h1.header").text.split("\n").delete_if {|x| x==""}.first
+    bio = doc.css("#maindetails_center_bottom").css(".article p").text
+    {:title => title, :bio => bio}
+  end
 
 private
 
@@ -34,7 +41,7 @@ private
 
 # Splitting out the text attributes for each li element
   def clean_li_listsings(li_values)
-     li_values.css("li").css("a").map {|li| [IMDB_URL + li.attributes["href"].to_s, li.text] }
+     li_values.css("li").css("a").map {|li| [li.attributes["href"].value.split("/").last, li.text] }
   end
 
   def query_hash(object, selected_month, selected_year)
