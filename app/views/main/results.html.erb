@@ -1,6 +1,6 @@
+<%= link_to "Back", root_path %>
 <% if !@response.empty? %>
   <%= render :partial => "main/shared/list_movies" %>
 <% else %>
   <p>Sorry, but nothing found for that date</p>
 <% end %>
-<%= link_to "Back", root_path %>
