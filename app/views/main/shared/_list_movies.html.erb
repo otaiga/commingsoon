@@ -1,10 +1,32 @@
-<% @response.each do |f| %>
-  <% f.each_pair do |k, v| %>
-    <h2><%= k %></h2>
-    <ul>
-    <% v.each do |film| %>
-      <li><%= link_to film[1], film[0] %> : <%= link_to "remind me", "#" %></li>
+<div class="container">
+  <div class="row">
+
+    <div class="span8 offset2">
+      <% @response.each do |f| %>
+      <% f.each_pair do |k, v| %>
+      <h3 class="smallTitle">Available on&nbsp;<%= k %></h2>
+       <% v.each do |film| %>
+
+       <div class="thumbnail">
+        <div class="caption">
+        <%= link_to film[1], film[0], :class => 'smallTitle fontSize13' %><br>
+         <p class="smallTitle">Bio</p><br>
+         <p class="bio">This is example text for the bio of the new film. Text here will give a short overview of then films story line/plot etc</p>
+         <p class="smallTitle">Cast</p><br>
+         <p class="bio">Bruce Willis, Jet Li, John Travolta, Mila Jovavic, Rachel Mcadams, Kate Beckinsale</p>
+         <%= link_to "remind me", "#", :class => 'button' %>
+       </div>
+       <img src="http://placehold.it/180x250">
+        </div>
+       
+    
     <% end %>
-    </ul>
   <% end %>
 <% end %>
+      
+
+
+    </div>
+  </div><!--Row-->
+</div><!--/container-->
+
