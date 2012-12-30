@@ -1,4 +1,5 @@
 Comingsoon::Application.configure do
+APP_CONFIG = YAML.load_file("#{Rails.root}/config/config.yml")[Rails.env]
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
@@ -14,7 +15,7 @@ Comingsoon::Application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
@@ -34,4 +35,17 @@ Comingsoon::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.action_mailer.default_url_options = {:host => 'localhost:3000'}
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => "gmail.com",
+      :user_name            => APP_CONFIG['user_name'],
+      :password             => APP_CONFIG['password'],
+      :authentication       => 'plain',
+      :enable_starttls_auto => true
+  }
+
 end
