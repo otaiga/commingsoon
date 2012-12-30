@@ -16,8 +16,8 @@
     <div class="nav-collapse collapse">
     <!-- .nav, .navbar-search, .navbar-form, etc -->
     <ul class="nav">
-        <li><i class="icon-lock icon-large"></i><%= link_to 'Sign in' , new_user_session_path %></li>
-        <li><%= link_to 'Sign up', new_user_registration_path %></li>
+        <li><i class="icon-lock icon-large"></i><%= display_login %></li>
+        <li><%= link_to 'Sign up', new_user_registration_path if !current_user %></li>
     </ul>
     </div>
      
