@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 <div class="container">
   <div class="row">
 
     <div class="span8 offset2">
-      <% @response.each do |f| %>
-      <% f.each_pair do |k, v| %>
-      <h3 class="smallTitle">Available on&nbsp;<%= k %></h2>
+     <% @response.each do |f| %>
+     <% f.each_pair do |k, v| %>
+       <h3 class="smallTitle">Available on&nbsp;<%= k %></h2>
        <% v.each do |film| %>
 
        <div class="thumbnail">
@@ -19,23 +18,14 @@
        </div>
        <img src="http://placehold.it/180x250">
         </div>
-       
-    
-=======
-<% @response.each do |f| %>
-  <% f.each_pair do |k, v| %>
-    <h2><%= k %></h2>
-    <ul>
-    <% v.each do |film| %>
-      <li><%= link_to film[1], film[0] %> : <%= link_to "remind me", reminders_path, :method => "post" %></li>
->>>>>>> devise
+
     <% end %>
   <% end %>
 <% end %>
       
 
 
-    </div>
+    </div><!--span8 offset2-->
   </div><!--Row-->
 </div><!--/container-->
 

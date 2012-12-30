@@ -47,7 +47,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.4.0)
-
     commonjs (0.2.6)
     devise (2.1.2)
       bcrypt-ruby (~> 3.0)
