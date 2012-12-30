@@ -41,7 +41,7 @@ private
 
 # Splitting out the text attributes for each li element
   def clean_li_listsings(li_values)
-     li_values.css("li").css("a").map {|li| [li.attributes["href"].value.split("/").last, li.text] }
+    li_values.css("li").css("a").map {|li| [li.attributes["href"].value.split("/").last, li.text] }
   end
 
   def query_hash(object, selected_month, selected_year)
