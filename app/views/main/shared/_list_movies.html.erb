@@ -1,10 +1,6 @@
-<% @response.each do |f| %>
-  <% f.each_pair do |k, v| %>
-    <h2><%= k %></h2>
-    <ul>
-    <% v.each do |film| %>
-      <li><%= link_to film[1], film_info_path(:id => film[0]) %> : <%= link_to "remind me", "#" %></li>
-    <% end %>
-    </ul>
-  <% end %>
+<% @response.each do |movie| %>
+  <h2><%= movie.release_date %></h2>
+  <ul>
+    <li><%= movie.name %> : <%= link_to "remind me", "#" %></li>
+  </ul>
 <% end %>
