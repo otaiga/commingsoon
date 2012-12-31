@@ -1,31 +1,22 @@
 <div class="container">
   <div class="row">
-
     <div class="span8 offset2">
-     <% @response.each do |f| %>
-     <% f.each_pair do |k, v| %>
-       <h3 class="smallTitle">Available on&nbsp;<%= k %></h2>
-       <% v.each do |film| %>
-
-       <div class="thumbnail">
-        <div class="caption">
-        <%= link_to film[1], film[0], :class => 'smallTitle fontSize13' %><br>
-         <p class="smallTitle">Bio</p><br>
-         <p class="bio">This is example text for the bio of the new film. Text here will give a short overview of then films story line/plot etc</p>
-         <p class="smallTitle">Cast</p><br>
-         <p class="bio">Bruce Willis, Jet Li, John Travolta, Mila Jovavic, Rachel Mcadams, Kate Beckinsale</p>
-         <%= link_to "remind me", "#", :class => 'button' %>
-       </div>
-       <img src="http://placehold.it/180x250">
-        </div>
-
-    <% end %>
-  <% end %>
-<% end %>
-      
-
-
+      <% @response.each_pair do |date, movie| %>
+        <h3 class="smallTitle">Available on&nbsp;<%= date %></h3>
+        <% movie.each do |m| %>
+          <div class="thumbnail">
+            <div class="caption">
+              <%= link_to m.name, "http://www.imdb.com/title/" + m.title_id, :class => 'smallTitle fontSize13' %><br>
+              <p class="smallTitle">Bio</p><br>
+              <p class="bio"><%= m.bio %></p>
+              <p class="smallTitle">Cast</p><br>
+              <p class="bio"><%= m.cast.join(", ") %></p>
+              <%= link_to "remind me", "#", :class => 'button' %>
+            </div>
+            <img src=<% if m.image_link %> <%= m.image_link %> width="180" height="250"<% else %> "http://placehold.it/180x250" <% end %>>
+          </div>
+        <% end %>
+      <% end %>
     </div><!--span8 offset2-->
   </div><!--Row-->
 </div><!--/container-->
-

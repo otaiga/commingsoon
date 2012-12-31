@@ -1,12 +1,14 @@
 class MainController < ApplicationController
-  include Movie::Release
 
   def index
     
   end
 
   def results
-    month = format_month(params[:date][:month].to_s)
-    @response = get_releases(month, params[:date][:year])
+    month = params[:date][:month]
+    year = params[:date][:year]
+    selection = Date.parse("01-#{month}-#{year}")
+    @response = MovieData.get_dates(selection)
   end
+
 end
