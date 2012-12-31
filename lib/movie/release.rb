@@ -4,11 +4,21 @@ module Movie::Release
   URL = "http://www.imdb.com/calendar/?region=gb"
   IMDB_URL = "http://www.imdb.com"
 
-  def get_releases(selected_month, selected_year)
+  def get_releases(selected_month=nil, selected_year=nil)
     doc = Nokogiri::HTML(open(URL))
     query_hash(clean_values(arranged_keys(doc)), selected_month, selected_year)
   end
 
+  ## Going to try and scrape the movie data.... messy messy
+  def get_movie_bio(id)
+    doc = Nokogiri::HTML(open(IMDB_URL + "/title/" + id))
+    title = doc.css("h1.header").text.split("\n").delete_if {|x| x==""}.first
+    bio = doc.css("#maindetails_center_bottom").css(".article p").text
+    image_link = doc.css("#img_primary img").first.attributes["src"].value if doc.css("#img_primary img").first
+    cast = get_cast(doc.css("table.cast_list td.name"))
+
+    {:title => title, :bio => bio, :image_link => image_link, :cast => cast}
+  end
 
 private
 
@@ -18,6 +28,14 @@ private
 
   def lists(object)
     object.css("#main ul")
+  end
+
+  def get_cast(cast_array)
+    cast = []
+    cast_array[0..4].each do |cast_member|
+      cast << cast_member.css("a").text
+    end
+    cast
   end
 
 # Creating a hash from array of keys with array of values (in this case h4 dates with ul objects)
@@ -34,12 +52,16 @@ private
 
 # Splitting out the text attributes for each li element
   def clean_li_listsings(li_values)
-     li_values.css("li").css("a").map {|li| [IMDB_URL + li.attributes["href"].to_s, li.text] }
+    li_values.css("li").css("a").map {|li| [li.attributes["href"].value.split("/").last, li.text] }
   end
 
-  def query_hash(object, selected_month, selected_year)
-    results = object.map {|response| response if response.keys.first.to_date.strftime("%m, %Y") == "#{selected_month}, #{selected_year}"}
-    results.delete_if {|x| x == nil}
+  def query_hash(object, selected_month=nil, selected_year=nil)
+    if selected_month && selected_year
+      results = object.map {|response| response if response.keys.first.to_date.strftime("%m, %Y") == "#{selected_month}, #{selected_year}"}
+    else
+      results = object.map {|response| response }
+    end
+      results.delete_if {|x| x == nil}
   end
 
 # adding in simple method to include extra digit to month.
