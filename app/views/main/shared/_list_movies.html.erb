@@ -1,6 +1,21 @@
-<% @response.each do |movie| %>
-  <h2><%= movie.release_date %></h2>
-  <ul>
-    <li><%= movie.name %> : <%= link_to "remind me", "#" %></li>
-  </ul>
-<% end %>
+<div class="container">
+  <div class="row">
+
+    <div class="span8 offset2">
+      <% @response.each do |movie| %>
+        <h3 class="smallTitle">Available on&nbsp;<%= movie.release_date  %></h3>
+        <div class="thumbnail">
+          <div class="caption">
+            <%= link_to movie.name, "#", :class => 'smallTitle fontSize13' %><br>
+            <p class="smallTitle">Bio</p><br>
+            <p class="bio"><%= movie.bio %></p>
+            <p class="smallTitle">Cast</p><br>
+            <p class="bio"><%= movie.cast.join(", ") %></p>
+            <%= link_to "remind me", "#", :class => 'button' %>
+          </div>
+          <img src=<% if movie.image_link %> <%= movie.image_link %> width="180" height="250"<% else %> "http://placehold.it/180x250"> <% end %>>
+        </div>
+      <% end %>
+    </div><!--span8 offset2-->
+  </div><!--Row-->
+</div><!--/container-->

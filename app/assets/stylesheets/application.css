@@ -11,3 +11,89 @@
  *= require_self
  *= require_tree .
 */
+
+/* Fonts */
+
+@font-face {
+    font-family: 'BebasRegular';
+    src: url('BEBAS___-webfont.eot');
+    src: url('BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),
+         url('BEBAS___-webfont.woff') format('woff'),
+         url('BEBAS___-webfont.ttf') format('truetype'),
+         url('BEBAS___-webfont.svg#BebasRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* General */
+
+.mb20{
+  margin-bottom:20px;
+  text-align: center;
+}
+
+
+.center {
+  text-align: center;
+}
+
+.hpSearch {
+  text-align: center;
+}
+
+.mainTitle {
+  font-family: 'BebasRegular';
+  color:#F2F9F9;
+  font-weight: normal;
+  display:inline-block;
+  border-left:4px solid #FFBE00;
+  padding-left:10px;
+  word-spacing:10px;
+}
+
+.smallTitle {
+  color:#F2F9F9;
+  text-align: center;
+  font-family: 'BebasRegular';
+  font-weight:normal;
+  word-spacing:10px;
+  display: inline-block;
+  border-bottom:2px solid #FFBE00;
+  margin-bottom:10px;
+}
+
+.fontSize13 {
+  font-size:1.3em;
+}
+
+
+.smallText {
+
+    color: #FFFFFF;
+    font-family: 'BebasRegular';
+    font-style: italic;
+    text-align: center;
+    word-spacing: 4px;
+}
+
+.main {
+  color:#898989;
+  font-family: 'Georgia';
+  line-height:24px;
+  font-size:1.2em;
+}
+
+
+/* Results */
+
+.results {
+  list-style-type: none;
+  margin:0px;
+}
+
+.bio {
+  color:#fff;
+  font-family:'Georgia';
+}
+

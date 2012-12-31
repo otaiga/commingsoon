@@ -1,9 +1,37 @@
-<h1>Welcome to Coming Soon Reminder</h1>
+<header>
+<div class="container">
+  <div class="row ">
+    <div class="span12 mb20">
+      <h1 class="mainTitle">Movie Release Reminder</h1>
+      <ul class="loginNav">
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</header>
+<div class="container">
+  <div class="row">
+    <div class="span12 mb20">
+      <h3 class="smallTitle">Search for New DVD Releases in the UK</h3>
+      <p class="smallText">and get a reminder the day before its released!!</p>
+    </div>
+  </div>
 
-<p> Search for films for a given date </p>
-<%= form_tag results_path, :method => "get" %>
-<%= select_date(date = Date.current, :order => [:month, :year]) %>
-<%= submit_tag "search" %>
+  <div class="container">
+    <div class="row">
+     <div class="span8 offset2 center">
+      <h3 class="smallTitle">QuickSearch</h3>
+      
+      <%= form_tag results_path, :method => "get" %>
+      <%= select_date(date = Date.current, :order => [:month, :year], :prompt => {:month => 'Select month', :year => 'Select Year'}) %><br>
+      <%= submit_tag "Search Releases", :class => 'button' %>
+      <br>
+      <!--<%= link_to "Next Month", results_path(:date => {:month => (Date.today + 1.month).month, :year => (Date.today + 1.month).year}) %>-->
+     </div>
+   </div>
+ </div>
+  </div>
+</div>
 
-<br>
-<%= link_to "Next Month", results_path(:date => {:month => (Date.today + 1.month).month, :year => (Date.today + 1.month).year} ) %>
