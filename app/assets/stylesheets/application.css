@@ -42,6 +42,10 @@
   text-align: center;
 }
 
+.pad20{
+  padding-top:20px;
+}
+
 .mainTitle {
   font-family: 'BebasRegular';
   color:#F2F9F9;
@@ -57,10 +61,11 @@
   text-align: center;
   font-family: 'BebasRegular';
   font-weight:normal;
-  word-spacing:10px;
+  word-spacing:4px;
   display: inline-block;
-  border-bottom:2px solid #FFBE00;
+  border-bottom:1px solid #FFBE00;
   margin-bottom:10px;
+  padding-bottom:3px;
 }
 
 .fontSize13 {
@@ -97,3 +102,26 @@
   font-family:'Georgia';
 }
 
+
+/* Media Queries */
+
+@media all and (max-width: 320px) {
+
+  .thumbnail.clearfix > img.pull-left {
+    float:none;
+    margin: 0 auto;
+  }
+
+  .thumbnail .caption.pull-right {
+    width: 100%;
+}
+
+.smallTitle {
+  display:block;
+}
+
+.thumbnail .caption.pull-right > .button {
+  display:block;
+}
+
+}
