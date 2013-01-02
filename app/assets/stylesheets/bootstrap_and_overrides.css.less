@@ -35,6 +35,10 @@ body {
   background:#46494F;
 }
 
+ h3 {
+    line-height: 30px;
+}
+
 header {
   background:#242426;
 }
@@ -67,6 +71,7 @@ select {
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
     vertical-align: middle;
     background-image: linear-gradient(to bottom, #FFBE00, #FFBE00);
+    color:#333;
     
 }
 
@@ -87,13 +92,16 @@ input[type="submit"] {
 .thumbnail > img {
   margin-left:0px;
   margin-right:0px;
+  width:180px;
+  height:250px;
+  max-width:100%;
 }
 
 
 .thumbnail {
-    border: 1px solid #DDDDDD;
-    border-radius: 4px 4px 4px 4px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+    border: none;
+    border-radius: none;
+    box-shadow: none;
     display: block;
     line-height: 20px;
     margin-bottom: 10px;
@@ -103,7 +111,7 @@ input[type="submit"] {
 
 .thumbnail .caption {
     color: #555555;
-    float: right;
+    //float: right;
     padding: 9px;
     width: 73%;
 }
@@ -115,7 +123,7 @@ input[type="submit"] {
 }
 
 li .icon-large:before, li .icon-large:before {
-    padding-top: 10px;
+    padding-top: 12px;
     width: 1.875em;
 }
 
