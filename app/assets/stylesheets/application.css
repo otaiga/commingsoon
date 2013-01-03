@@ -105,8 +105,30 @@
 
 /* Media Queries */
 
+@media all and (max-width: 767px) {
+
+.navbar {
+    margin-left:-25px;
+    margin-right:-25px;
+  }
+
+
+
+
+}
+
+@media all and (max-width: 1199px) {
+ .thumbnail .caption.pull-right {
+    width: 67%;
+    padding:0px;
+}
+
+
+}
+
 @media all and (max-width: 320px) {
 
+  
   .thumbnail.clearfix > img.pull-left {
     float:none;
     margin: 0 auto;
@@ -114,14 +136,23 @@
 
   .thumbnail .caption.pull-right {
     width: 100%;
+    padding:0px;
 }
 
 .smallTitle {
   display:block;
+  margin-bottom:0px;
+}
+
+.bio {
+  margin:0px 0px 10px auto;
 }
 
 .thumbnail .caption.pull-right > .button {
   display:block;
 }
 
+h3.smallTitle {
+  margin-bottom:5px;
+}
 }
