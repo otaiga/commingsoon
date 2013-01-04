@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Comingsoon</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+  <head>
+    <title>Comingsoon</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
 
-  <% flash.each do |name, msg| %>
-  <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
-    <a class="close" data-dismiss="alert">×</a>
-    <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
-  </div>
-<% end %>
-</head>
+    <% flash.each do |name, msg| %>
+    <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+      <a class="close" data-dismiss="alert">×</a>
+      <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+    </div>
+  <% end %>
+  </head>
 
-<body>
-  <%= render :partial => 'main/shared/navbar' %>
+  <body>
+    <%= render :partial => 'main/shared/navbar' %>
+    <%= yield %>
+  </body>
 
-<%= yield %>
-
-</body>
 </html>

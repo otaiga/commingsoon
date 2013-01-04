@@ -11,7 +11,7 @@
               <p class="bio"><%= m.bio %></p>
               <p class="smallTitle">Cast</p><br>
               <p class="bio"><%= m.cast.join(", ") %></p>
-              <%= link_to "Remind me", "#", :class => 'button' %>
+              <%= link_to "Remind me", reminders_path, :method => :post, :class => 'button' %>
             </div>
           </div>
         <% end %>
