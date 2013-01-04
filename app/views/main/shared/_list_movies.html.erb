@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row">
-    <div class="span8 offset2">
+    <div class="span8 offset2 resize">
       <% @response.each_pair do |date, movie| %>
         <h3 class="smallTitle">Available on&nbsp;<%= date %></h3>
         <% movie.each do |m| %>
           <div class="thumbnail clearfix">
-            <img class="pull-left" src=<% if m.image_link %> <%= m.image_link %> <% else %> "http://placehold.it/180x250" <% end %>>
+            <img class="pull-left" src=<% if m.image_link %> <%= m.image_link %> <% else %> "/assets/noimage.jpg" <% end %>>
             <div class="caption pull-right">
               <%= link_to m.name, "http://www.imdb.com/title/" + m.title_id, :class => 'smallTitle fontSize13' %><br>
               <p class="bio"><%= m.bio %></p>
@@ -19,3 +19,4 @@
     </div><!--span8 offset2-->
   </div><!--Row-->
 </div><!--/container-->
+
