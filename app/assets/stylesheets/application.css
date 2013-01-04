@@ -105,17 +105,7 @@
 
 /* Media Queries */
 
-@media all and (max-width: 767px) {
 
-.navbar {
-    margin-left:-25px;
-    margin-right:-25px;
-  }
-
-
-
-
-}
 
 @media all and (max-width: 1199px) {
  .thumbnail .caption.pull-right {
@@ -126,12 +116,47 @@
 
 }
 
+@media all and (max-width: 979px) {
+
+  .thumbnail.clearfix > img.pull-left {
+    float:none;
+    margin: 10px auto;
+  }
+
+.thumbnail .caption.pull-right {
+    padding: 0;
+    width: 100%;
+}
+
+.smallTitle {
+  display: block;
+}
+
+.button {
+  display: block;
+}
+
+
+
+}
+
+
+@media all and (max-width: 767px) {
+
+.navbar {
+    margin-left:-25px;
+    margin-right:-25px;
+  }
+
+}
+
+
 @media all and (max-width: 320px) {
 
   
   .thumbnail.clearfix > img.pull-left {
     float:none;
-    margin: 0 auto;
+    margin: 10px auto;
   }
 
   .thumbnail .caption.pull-right {
