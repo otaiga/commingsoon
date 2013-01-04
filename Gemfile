@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.3'
+gem 'rails', '3.2.10'
 gem 'mysql2'
 gem 'nokogiri'
 
@@ -13,8 +13,11 @@ group :assets do
   gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
   gem 'less-rails'
   gem 'therubyracer', '0.10.2' 
+end
 
-
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'brakeman'
 end
 
 gem 'jquery-rails'
