@@ -7,4 +7,13 @@ class Reminder < ActiveRecord::Base
     MovieData.find_by_title_id(self.movie_title_id)
   end
 
+  def self.tomorrows_releases
+    date = Date.tomorrow
+    response = []
+    self.all.each do |reminder|
+      response << reminder if reminder.movie.release_date == date
+    end
+    response
+  end
+
 end
