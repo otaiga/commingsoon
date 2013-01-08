@@ -9,7 +9,7 @@
             <div class="caption pull-right">
               <%= link_to m.name, "http://www.imdb.com/title/" + m.title_id, :class => 'smallTitle fontSize13' %><br>
               <p class="bio"><%= m.bio %></p>
-              <p class="smallTitle">Cast</p><br>
+              <p class="smallTitle fontSize13">Cast</p><br>
               <p class="bio"><%= m.cast.join(", ") %></p>
               <%= link_to "Remind me", "#", :class => 'button' %>
             </div>

@@ -28,6 +28,7 @@
 
 /* General */
 
+
 .mb20{
   margin-bottom:20px;
   text-align: center;
@@ -153,6 +154,11 @@
 
 @media all and (max-width: 320px) {
 
+  /* Home Page */
+
+  .mainTitle {
+    width:81%;
+  }
   
   .thumbnail.clearfix > img.pull-left {
     float:none;
@@ -164,9 +170,14 @@
     padding:0px;
 }
 
+ /* Results */
+
+
 .smallTitle {
   display:block;
   margin-bottom:0px;
+  width:85%;
+  margin:0 auto;
 }
 
 .bio {
