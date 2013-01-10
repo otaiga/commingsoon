@@ -6,6 +6,6 @@ Comingsoon::Application.routes.draw do
 
   get "results" => 'main#results'
 
-  resources :reminders, :only => :create
+  resources :reminders, :only => [:index, :create, :destroy]
 
 end
