@@ -23,6 +23,29 @@
       <% else %>
         <p class="smallText">You have no reminders set</p>
       <% end %>
+
+      <% unless @processed_reminders.empty? %>
+        <h4>Old Reminders </h4>
+        <table class="reminder">
+          <th>
+            <tr>
+              <td class="thread">Movie Name</td>
+              <td class="thread">Release date</td>
+              <td class="thread">Actions</td>
+            </tr>
+          </th>
+        <% @processed_reminders.each do |reminder| %>
+          <%if reminder.movie %>
+              <tr>
+                <td class="smallText"><%= reminder.movie.name unless reminder.movie.name == nil %> </td>
+                <td class="smallText"><%= reminder.movie.release_date %> </td>
+                <td class="smallText"><%= link_to "X", reminder_path(reminder), :confirm => "Are you sure you want to remove this reminder?", method: :delete %></td>
+              </tr>
+          <% end %>
+        <% end %>
+        </table>
+
+      <% end %>
     </div>
   </div>
 </div>

@@ -16,4 +16,12 @@ class Reminder < ActiveRecord::Base
     response
   end
 
+  def self.new_reminders
+    self.where(status: "new")
+  end
+
+  def self.processed_reminders
+    self.where(status: "processed")
+  end
+
 end
