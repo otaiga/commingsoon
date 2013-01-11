@@ -3,7 +3,7 @@ class ReminderWorker
 
   def perform(movie_name, recipient)
     return unless recipient && movie_name
-    #TODO -- remove reminder for user if below happens
+    #TODO -- update reminder status for user if below happens
     send_mail(movie_name, recipient)
   end 
 
