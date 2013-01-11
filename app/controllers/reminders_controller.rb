@@ -2,16 +2,16 @@ class RemindersController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    @reminders = cleaned_response(current_user.reminders)
+    @reminders = cleaned_response(current_user.reminders.new_reminders)
+    @processed_reminders = cleaned_response(current_user.reminders.processed_reminders)
   end
 
   def create
     movie_title_id = params[:title_id]
     reminder = current_user.reminders.new(movie_title_id: movie_title_id)
     if reminder.save
-      #send to sikekiq job
+      redirect_to root_path
     end
-    redirect_to root_path
   end
 
   def destroy

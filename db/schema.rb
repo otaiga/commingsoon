@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130105111235) do
+ActiveRecord::Schema.define(:version => 20130111220110) do
 
   create_table "movie_data", :force => true do |t|
     t.date     "release_date"
@@ -27,8 +27,9 @@ ActiveRecord::Schema.define(:version => 20130105111235) do
   create_table "reminders", :force => true do |t|
     t.integer  "user_id"
     t.string   "movie_title_id"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+    t.string   "status",         :default => "new"
   end
 
   create_table "users", :force => true do |t|

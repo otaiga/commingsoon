@@ -1,5 +1,5 @@
 class Reminder < ActiveRecord::Base
-  attr_accessible :movie_title_id
+  attr_accessible :movie_title_id, :status
   belongs_to :user
 
   def movie
@@ -10,10 +10,18 @@ class Reminder < ActiveRecord::Base
   def self.tomorrows_releases
     date = Date.tomorrow
     response = []
-    self.all.each do |reminder|
+    self.new_reminders.each do |reminder|
       response << reminder if reminder.movie.release_date == date
     end
     response
+  end
+
+  def self.new_reminders
+    self.where(status: "new")
+  end
+
+  def self.processed_reminders
+    self.where(status: "processed")
   end
 
 end
