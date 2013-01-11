@@ -13,7 +13,7 @@ class ReminderWorker
 
   def update_reminder(release_id)
     return unless release_id
-    Release.find(release_id).update_attributes(status: "processed")
+    Reminder.find(release_id).update_attributes(status: "processed")
   end
 
 end
