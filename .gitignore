@@ -15,3 +15,4 @@
 /tmp
 /config/config.yml
 /config/provision/puppet/extdata/*
+/config/provision/puppet/modules/comingsoon/files/*
