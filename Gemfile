@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.10'
+gem 'rails', '3.2.11'
 gem 'mysql2'
 gem 'nokogiri'
 
@@ -24,3 +24,6 @@ group :development, :test do
 end
 
 gem 'jquery-rails'
+
+# Adding capistrano for deployment
+gem 'capistrano'
