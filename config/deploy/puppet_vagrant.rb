@@ -2,8 +2,8 @@ server "33.33.0.3", :app, :web
 server "33.33.0.3", :db, :primary => true
 
 set :user, "vagrant"
-set :env, "vagrant"
-set :rails_env, "vagrant"
+set :env, "production"
+set :rails_env, "production"
 
 # This uses the key for vagrant box.
 ssh_options[:keys] = '~/.vagrant.d/insecure_private_key'

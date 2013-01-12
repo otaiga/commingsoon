@@ -8,7 +8,7 @@ set :repository,  "git@github.com:otaiga/commingsoon.git"
 
 set :scm, :git
 
-set :deploy_to, "/var/apps/commingsoon" 
+set :deploy_to, "/var/apps/comingsoon"
 
 set :use_sudo, false  # not using sudo - no need
 
