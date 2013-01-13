@@ -51,6 +51,7 @@ a:hover {
 
 header {
   background:#242426;
+  margin-bottom:10px;
 }
 
 select {
@@ -80,6 +81,10 @@ select {
     text-align: center;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
     vertical-align: middle;
+    background-image: -webkit-linear-gradient(to bottom, #FFBE00, #FFBE00);
+    background-image: -moz-linear-gradient(to bottom, #FFBE00, #FFBE00);
+    background-image: -o-linear-gradient(to bottom, #FFBE00, #FFBE00);
+    background-image: -ms-linear-gradient(to bottom, #FFBE00, #FFBE00);
     background-image: linear-gradient(to bottom, #FFBE00, #FFBE00);
     color:#333;
     
@@ -90,7 +95,7 @@ select {
 }
 
 input[type="submit"] {
-  width:35%;
+  width:50%;
   height:60px;
   font-family:'BebasRegular';
   font-size:1.4em;
@@ -152,10 +157,12 @@ li [class^="icon-"], li [class*="icon-"] {
 .navbar-inner {
     background: #242426;
     background-color: #242426;
+    background-image: -webkit-linear-gradient(to bottom, #242426, #242426);
+    background-image: -moz-linear-gradient(to bottom, #242426, #242426);
     background-image: linear-gradient(to bottom, #242426, #242426);
     background-repeat: repeat-x;
     border:none;
-    border-radius:nonw;
+    border-radius:none;
     box-shadow: none;
     min-height: 40px;
     padding-left: 20px;
@@ -178,7 +185,8 @@ li [class^="icon-"], li [class*="icon-"] {
 
 .navbar .btn-navbar {
     background-color: #FFBE00;
-    background-image:linear-gradient(to bottom, #FFBE00, #FFBE00);
+    background-image:-webkit-linear-gradient(to bottom, #FFBE00, #FFBE00);
+    background-image:-moz-linear-gradient(to bottom, #FFBE00, #FFBE00);
     background-repeat: repeat-x;
     border-color: #FFBE00;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset, 0 1px 0 rgba(255, 255, 255, 0.075);
@@ -191,6 +199,17 @@ li [class^="icon-"], li [class*="icon-"] {
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 
+.navbar .btn-navbar {
+  background-color: #FFBE00;
+  background: #FFBE00;
+}
+
+.navbar .btn-navbar:hover,
+.navbar .btn-navbar:active {
+  background-color: #FFBE00;
+  background: #FFBE00;
+}
+
 
 
 @media all and (max-width: 320px) {
@@ -198,7 +217,7 @@ li [class^="icon-"], li [class*="icon-"] {
    // HomePage //
    
    input[type="submit"] {
-   width:65%;
+   width:70%;
   }
 
   header {
@@ -212,6 +231,7 @@ li [class^="icon-"], li [class*="icon-"] {
 
   .nav-collapse .nav > li > a:hover, .nav-collapse .dropdown-menu a:hover {
     background-color: #242426;
+
 }
 
   // Results //
@@ -222,11 +242,10 @@ li [class^="icon-"], li [class*="icon-"] {
 
  .navbar .nav {
  margin-top:15px;
- margin-right:48px;
+
  }
 
  .navbar .nav > li {
- display:inline;
  float:left;
  }
 
