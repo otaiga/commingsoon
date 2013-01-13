@@ -1,4 +1,5 @@
 Comingsoon::Application.configure do
+  APP_CONFIG = YAML.load_file("#{Rails.root}/config/config.yml")[Rails.env]
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
@@ -64,4 +65,16 @@ Comingsoon::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+  config.action_mailer.default_url_options = {:host => 'comingsoon.fishplatestudios.co.uk'}
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => "gmail.com",
+      :user_name            => APP_CONFIG['user_name'],
+      :password             => APP_CONFIG['password'],
+      :authentication       => 'plain',
+      :enable_starttls_auto => true
+  }
 end

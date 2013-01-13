@@ -1,5 +1,5 @@
 class ImdbWorker
-  include Movie::Release 
+  include Movie::Release
 
   def perform
     get_movie_info

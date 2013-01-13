@@ -57,6 +57,15 @@
   word-spacing:10px;
 }
 
+.mainTitle a {
+  color:#F2F9F9;
+}
+
+.mainTitle a:hover {
+  color:#F2F9F9;
+  text-decoration: none;
+}
+
 .smallTitle {
   color:#F2F9F9;
   text-align: center;
@@ -103,6 +112,24 @@
   font-family:'Georgia';
 }
 
+/* Reminder table */
+
+table.reminder {
+  display: inline-table;
+  margin: 36px;
+}
+
+.thread {
+  color:  #F2F9F9;
+  font-family: 'BebasRegular';
+  font-weight:normal;
+}
+
+table.reminder td {
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 1.2em;
+}
 
 /* Media Queries */
 
@@ -191,4 +218,5 @@
 h3.smallTitle {
   margin-bottom:5px;
 }
+
 }

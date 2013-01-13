@@ -7,11 +7,11 @@
           <div class="thumbnail clearfix">
             <img class="pull-left" src=<% if m.image_link %> <%= m.image_link %> <% else %> "/assets/noimage.jpg" <% end %>>
             <div class="caption pull-right">
-              <%= link_to m.name, "http://www.imdb.com/title/" + m.title_id, :class => 'smallTitle fontSize13' %><br>
+              <%= link_to m.name, m.title_id, :class => 'smallTitle fontSize13' %><br>
               <p class="bio"><%= m.bio %></p>
-              <p class="smallTitle fontSize13">Cast</p><br>
-              <p class="bio"><%= m.cast.join(", ") %></p>
-              <%= link_to "Remind me", "#", :class => 'button' %>
+              <p class="smallTitle">Cast</p><br>
+              <p class="bio"><%= m.cast.join(", ") unless m.cast.empty? %></p>
+              <%= link_to "Remind me", reminders_path(:title_id => m.title_id), :method => :post, :class => 'button' %>
             </div>
           </div>
         <% end %>
