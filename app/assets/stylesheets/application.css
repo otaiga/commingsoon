@@ -347,14 +347,10 @@ li.resp1{
 
 /* FOOTER */
 
-ul#linkLeft {
-  
+ul#linkLeft, ul#linkRight {
+  margin:0px;
 }
 
-ul#linkRight {
-  
-
-}
 
 ul#linkRight li a , ul#linkLeft li a {
   font-size:0.875em;
