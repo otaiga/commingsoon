@@ -1,6 +1,7 @@
 require 'bundler/capistrano'
 require 'capistrano/ext/multistage'
 require "whenever/capistrano"
+require 'sidekiq/capistrano'
 
 set :stages, %w( vagrant puppet_vagrant production puppet_production )
 
