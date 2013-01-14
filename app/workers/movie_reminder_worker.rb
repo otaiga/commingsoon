@@ -17,6 +17,7 @@ class MovieReminderWorker
   def get_movie_details
     MovieData.all.each do |movie|
       retrieve_details(movie) if movie.title_id
+      sleep 3
     end
   end
 
