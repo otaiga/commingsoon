@@ -72,9 +72,13 @@
   font-weight:normal;
   word-spacing:4px;
   display: inline-block;
-  border-bottom:1px solid #FFBE00;
+  border-bottom:1px dotted #FFBE00;
   margin-bottom:10px;
   padding-bottom:3px;
+}
+
+.fontSize11 {
+  font-size:1.1em;
 }
 
 .fontSize13 {
@@ -98,6 +102,10 @@
   font-size:1.2em;
 }
 
+#searchWrapper {
+  text-align: center;
+}
+
 /* SEARFORM (MOVIE BY NAME) */
 
 #searchForm {
@@ -108,6 +116,7 @@
   -o-border-radius:5px;
   -ms-border-radius:5px;
   border-radius:5px;
+  margin-top:10px;
 }
 
 #searchForm input[type="image"] {
@@ -156,6 +165,32 @@ table.reminder td {
   padding-left: 30px;
   padding-right: 30px;
   font-size: 1.2em;
+}
+
+/* FOOTER */
+
+
+ul#linkLeft {
+  
+}
+
+ul#linkLeft li {
+  text-align:left;
+  margin-top:15px;
+}
+
+ul#linkRight {
+  
+
+}
+
+ul#linkRight li a , ul#linkLeft li a {
+  color:#FFBE00;
+}
+
+ul#linkRight li  {
+  text-align:right;
+  margin-top:15px;
 }
 
 /* Media Queries */
