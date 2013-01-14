@@ -32,3 +32,5 @@ gem 'jquery-rails'
 
 # Adding capistrano for deployment
 gem 'capistrano'
+
+gem 'whenever', :require => false
