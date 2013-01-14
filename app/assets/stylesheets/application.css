@@ -345,5 +345,24 @@ li.resp1{
   font-size: 1.1em;
 }
 
+/* FOOTER */
+
+ul#linkLeft {
+  
+}
+
+ul#linkRight {
+  
+
+}
+
+ul#linkRight li a , ul#linkLeft li a {
+  font-size:0.875em;
+}
+
+ul#linkRight li, ul#linkLeft li  {
+  text-align:center;
+}
+
 
 }
