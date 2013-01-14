@@ -17,8 +17,13 @@
   </head>
 
   <body>
+    <div id="wrap">
     <%= render :partial => 'main/shared/navbar' %>
     <%= yield %>
+    </div>
+    <div id="push"></div>
+    <%= render :partial => 'main/shared/footer' %>
+
   </body>
 
 </html>
