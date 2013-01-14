@@ -4,10 +4,15 @@ gem 'rails', '3.2.11'
 gem 'mysql2'
 gem 'nokogiri'
 
+# Authentication
 gem 'devise'
 
 # scheduling mailer tasks, etc
 gem 'sidekiq'
+
+# autocomplete for search
+gem 'rails3-jquery-autocomplete'
+
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
