@@ -6,6 +6,8 @@ Comingsoon::Application.routes.draw do
 
   get "results" => 'main#results'
 
+  get "main/autocomplete" => 'main#autocomplete_movie_data_name'
+
   resources :reminders, :only => [:index, :create, :destroy]
 
 end

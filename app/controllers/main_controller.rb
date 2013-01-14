@@ -1,4 +1,5 @@
 class MainController < ApplicationController
+  autocomplete :movie_data, :name
 
   def index
     

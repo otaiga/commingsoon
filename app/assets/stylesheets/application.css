@@ -121,6 +121,20 @@
   
 }
 
+/* Adding in styling for autocomplete gem */
+
+li.ui-menu-item {
+  list-style:none;
+}
+
+li.ui-menu-item a {
+
+}
+
+/*This provides info inside the form element*/
+.ui-helper-hidden-accessible {
+  display: none;
+}
 
 
 /* Results */
@@ -295,7 +309,6 @@ li.resp1{
   font-family:'LatoRegular';
   font-size: 1.1em;
 }
-
 
 
 }
