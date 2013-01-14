@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="span12">
-      <%= form_tag results_path, :id => 'searchForm', :method => 'get' do %>
+      <%= form_tag single_result_path, :new_id => "qwdwa", :id => 'searchForm', :method => 'get' do %>
       <%= autocomplete_field_tag 'search', '', main_autocomplete_path, :placeholder => 'Enter Movie Name Here...'%>
       <%= submit_tag 'Search', :type => :image, :src => '/assets/searchicon.png' %>
       <% end %>
