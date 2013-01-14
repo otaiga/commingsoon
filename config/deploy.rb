@@ -1,5 +1,6 @@
 require 'bundler/capistrano'
 require 'capistrano/ext/multistage'
+require "whenever/capistrano"
 
 set :stages, %w( vagrant puppet_vagrant production puppet_production )
 
@@ -15,6 +16,9 @@ set :use_sudo, false  # not using sudo - no need
 #The below allows copy (no need for ssh keys, etc on the remote server)
 set :deploy_via, :copy
 set :copy_strategy, :export
+
+set :whenever_command, "bundle exec whenever"
+set :whenever_environment, defer { stage }
 
 
 # if you want to clean up old releases on each deploy do this:
