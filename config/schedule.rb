@@ -21,12 +21,12 @@
 
 env :PATH, ENV['PATH']
 
-## Run reminder mail check every morning at 12:00am.
+## Run reminder mail check every morning at 2:00am.
 every 1.day, :at => '2am' do
   rake "mail:reminders"
 end
 
 ## Run db refresh every 2 weeks at 12:00am.
-every 2.weeks, :at => '2am' do
+every 2.weeks, :at => '12am' do
   rake "movieinsider:retrieve"
 end
