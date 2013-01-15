@@ -9,7 +9,7 @@ module ApplicationHelper
   end
 
   def date_format(date)
-    date.to_date.strftime("#{date.to_date.day.ordinalize} %B %Y")
+    date.to_date.strftime("#{date.to_date.day.ordinalize} %b %Y")
   end
 
 end
