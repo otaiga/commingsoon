@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="span8 offset2 resize">
-      <h3 class="smallTitle">Available on&nbsp;<%= @movie.release_date %></h3>
+      <h3 class="smallTitle">Available on&nbsp;<%= date_format(@movie.release_date) %></h3>
       <div class="thumbnail clearfix">
         <img class="pull-left" src=<% if @movie.image_link %> <%= @movie.image_link %> <% else %> "/assets/noimage.jpg" <% end %>>
         <div class="caption pull-right">
