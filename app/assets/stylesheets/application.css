@@ -244,6 +244,20 @@ ul#linkRight li  {
 
 }
 
+@media all and (min-width: 321px) and (max-width: 978px) {
+
+#navWrapper {
+  margin:0 auto;
+  }
+
+ul.nav {
+  float:left;
+  }
+
+
+
+}
+
 
 @media all and (max-width: 767px) {
 
@@ -268,6 +282,7 @@ ul#linkLeft {
 ul#linkRight {
   padding-right:10px;
 }
+
 
 }
 
