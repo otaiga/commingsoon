@@ -21,10 +21,6 @@
 env :PATH, ENV['PATH']
 set :output, "/var/apps/comingsoon/shared/log/cron_log.log"
 
-every 2.minutes do
-  command "touch ~/testing_cron"
-end
-
 ## Run reminder mail check every morning at 2:00am.
 every 1.day, :at => '2am' do
   rake "mail:reminders"
