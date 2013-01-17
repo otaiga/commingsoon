@@ -5,7 +5,6 @@
 
 # Example:
 #
-# set :output, "/path/to/my/cron_log.log"
 #
 # every 2.hours do
 #   command "/usr/bin/some_great_command"
@@ -20,6 +19,11 @@
 # Learn more: http://github.com/javan/whenever
 
 env :PATH, ENV['PATH']
+set :output, "/var/apps/comingsoon/shared/log/cron_log.log"
+
+every 2.minutes do
+  touch "~/testing_cron"
+end
 
 ## Run reminder mail check every morning at 2:00am.
 every 1.day, :at => '2am' do
