@@ -244,6 +244,20 @@ ul#linkRight li  {
 
 }
 
+@media all and (min-width: 321px) and (max-width: 978px) {
+
+#navWrapper {
+  margin:0 auto;
+  }
+
+ul.nav {
+  float:left;
+  }
+
+
+
+}
+
 
 @media all and (max-width: 767px) {
 
@@ -252,13 +266,30 @@ ul#linkRight li  {
     margin-right:-25px;
   }
 
-header {
+header, footer{
   margin-left:-25px;
   margin-right:-25px;
 }
 
 }
 
+@media all and (min-width: 321px) and (max-width: 767px){
+
+ul#linkLeft {
+  float:left;
+}
+
+ul#linkRight {
+  padding-right:10px;
+}
+
+
+}
+
+@media all and (min-width: 321px) and (max-width: 359px) {
+
+  
+}
 
 @media all and (max-width: 320px) {
 
