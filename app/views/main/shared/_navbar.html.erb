@@ -17,6 +17,7 @@
         <div id="navWrapper">
         <ul class="nav">
           <li><%= link_to "Reminders", reminders_path unless !current_user %></li>
+          <li><%= link_to "Account", edit_user_registration_path unless !current_user %></li>
           <li><i class="icon-lock icon-large"></i><%= display_login %></li>
           <li><%= link_to 'Sign up', new_user_registration_path if !current_user %></li>
         </ul>
