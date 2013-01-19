@@ -9,7 +9,7 @@
           <p class="bio"><%= @movie.bio %></p>
           <p class="smallTitle">Cast</p><br>
           <p class="bio"><%= @movie.cast.join(", ") unless @movie.cast.empty? %></p>
-          <%= link_to "Remind me", reminders_path(:title_id => @movie.title_id), :method => :post, :class => 'button' %>
+          <%= link_to "Remind me", reminders_path(:title_id => @movie.title_id), :method => :post, :class => 'links button' %>
         </div>
       </div>
     </div><!--span8 offset2-->
