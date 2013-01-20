@@ -1,5 +1,9 @@
-<p>Welcome <%= @resource.email %>!</p>
+<p>Welcome to Movie Release Reminder <%= @resource.email %>!,</p>
 
-<p>You can confirm your account email through the link below:</p>
+<p>So that we can confirm you are who you say we are we need you to confirm that it was you who requested to be a part of Movie Release Reminder, you can confirm your account through the link below:</p>
 
 <p><%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
+
+<p>We hope you find Movie Release Reminder useful and dont forget you can cancel your account any time by going to your account section in the app </p>
+
+<p> The Team at Movie Release Reminder </p>
