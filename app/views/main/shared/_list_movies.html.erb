@@ -2,14 +2,14 @@
   <div class="row">
     <div class="span8 offset2 resize">
       <% @response.each_pair do |date, movie| %>
-        <h3 class="smallTitle fontSize13">Available on&nbsp;<%= date_format(date) %></h3>
+        <h3 class="resultTitle fontSize13">Available on&nbsp;<%= date_format(date) %></h3>
         <% movie.each do |m| %>
           <div class="thumbnail clearfix">
             <img class="pull-left" src=<% if m.image_link %> <%= m.image_link %> <% else %> "/assets/noimage.jpg" <% end %>>
             <div class="caption pull-right">
-              <%= link_to m.name, m.title_id, :class => 'smallTitle fontSize11' %><br>
+              <%= link_to m.name, m.title_id, :class => 'resultTitle fontSize11' %>
               <p class="bio"><%= m.bio %></p>
-              <p class="smallTitle">Cast</p><br>
+              <p class="resultTitle">Cast</p>
               <p class="bio"><%= m.cast.join(", ") unless m.cast.empty? %></p>
               <%= link_to "Remind me", reminders_path(:title_id => m.title_id), :method => :post, :class => 'links button' %>
             </div>
