@@ -62,7 +62,7 @@
         </table>
         <!--Responsive Table -->
         <div class="respwrapper">
-          <% @reminders.each do |reminder| %>
+          <% @processed_reminders.each do |reminder| %>
             <ul class="resp">
               <%if reminder.movie %>
                 <li class="resp1"><%= reminder.movie.name unless reminder.movie.name == nil %></li>
