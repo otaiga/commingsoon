@@ -380,6 +380,7 @@ ul.resp li:first-child {
 
   input[type="submit"] {
     width:70%;
+    margin:0 auto;
   }
   
   .thumbnail.clearfix > img.pull-left {
