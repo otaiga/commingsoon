@@ -202,7 +202,12 @@ li [class^="icon-"], li [class*="icon-"] {
 }
 
 .navbar .nav > li > a:hover {
-    color: #F2F9F9;
+    color: #FFBE00;
+}
+
+.nav-collapse .nav > li > a:hover {
+  background-color:#242426;
+  background:#242426;
 }
 
 
@@ -233,22 +238,52 @@ li [class^="icon-"], li [class*="icon-"] {
   background: #FFBE00;
 }
 
-@media all and (min-width: 321px) and (max-width: 978px) {
-
+@media all and (max-width: 979px) {
   
+ /* NAVIGATION BAR */
+
   .navbar .nav {
-  display:inline-block;
-  float:none;
+    float:none;
   }
 
-  .navbar .nav > li {
-    float: left;
-}
+  .navbar .nav > li > a {
+    float:none;
+  }
+
+  .nav-collapse .nav > li {
+    text-align:center;
+  }
 
 }
 
+@media all and (max-width: 480px) {
 
-@media all and (max-width: 320px) {
+   // NAVIGATION BAR //
+
+   .nav-collapse .nav > li > a:hover, .nav-collapse .dropdown-menu a:hover {
+    background-color: #242426;
+    }
+   
+
+   .navbar .nav {
+    margin-top:15px;
+    float:none;
+    display:block;
+   }
+
+   .navbar .nav > li {
+    float:none;
+   }
+
+   .navbar .nav > li a {
+    float:none;
+   }
+
+   .nav-collapse .nav > li {
+    text-align: center;
+   }
+
+
     
    // HomePage //
    
@@ -265,25 +300,15 @@ li [class^="icon-"], li [class*="icon-"] {
   width:35%;
   }
 
-  .nav-collapse .nav > li > a:hover, .nav-collapse .dropdown-menu a:hover {
-    background-color: #242426;
-
-}
+  
 
   // Results //
 
   .button {
   margin-bottom:5px;
+  display:block;
  }
 
- .navbar .nav {
- margin-top:15px;
-
- }
-
- .navbar .nav > li {
- float:left;
- }
-
+ 
 
 }
