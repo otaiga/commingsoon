@@ -1,13 +1,13 @@
 <div class="container">
   <div class="row">
     <div class="span8 offset2 resize">
-      <h3 class="smallTitle">Available on&nbsp;<%= date_format(@movie.release_date) %></h3>
+      <h3 class="resultTitle">Available on&nbsp;<%= date_format(@movie.release_date) %></h3>
       <div class="thumbnail clearfix">
         <img class="pull-left" src=<% if @movie.image_link %> <%= @movie.image_link %> <% else %> "/assets/noimage.jpg" <% end %>>
         <div class="caption pull-right">
-          <%= link_to @movie.name, @movie.title_id, :class => 'smallTitle fontSize13' %><br>
+          <%= link_to @movie.name, @movie.title_id, :class => 'resultTitle fontSize13' %>
           <p class="bio"><%= @movie.bio %></p>
-          <p class="smallTitle">Cast</p><br>
+          <p class="resultTitle">Cast</p>
           <p class="bio"><%= @movie.cast.join(", ") unless @movie.cast.empty? %></p>
           <%= link_to "Remind me", reminders_path(:title_id => @movie.title_id), :method => :post, :class => 'links button' %>
         </div>
