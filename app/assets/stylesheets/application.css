@@ -317,46 +317,48 @@ ul#linkRight {
 
   /* REMINDER TABLE */
 
-table.reminder {
-  display:none;
-}
+  table.reminder {
+    display:none;
+  }
 
-.respwrapper {
-  display:block;
-}
+  .respwrapper {
+    display:block;
+  }
 
-ul.resp{
-  text-align: left;
-  margin:0px;
-}
+  ul.resp{
+    text-align: left;
+    margin:0px;
+  }
 
-ul.resp .button {
-  margin:0 auto; 
-  width:50%;
-  display:block;
-  margin-top:10px;
-  margin-bottom:10px;
-}
+  ul.resp .button {
+    margin:0 auto;
+    width:50%;
+    display:block;
+    margin-top:10px;
+    margin-bottom:10px;
+  }
 
-ul.resp span {
-  width:30%;
-  display:inline-block;
-}
+  ul.resp span {
+    width:30%;
+    display:inline-block;
+  }
 
-li.resp1{
-  list-style-type:none;
-  color:white;
-  line-height:25px;
-  font-family:'LatoRegular';
-  font-size: 1.1em;
-  text-align:center;
-}
+  li.resp1{
+    list-style-type:none;
+    color:white;
+    line-height:25px;
+    font-family:'LatoRegular';
+    font-size: 1.1em;
+    text-align:center;
+  }
 
-ul.resp li:first-child {
-  margin-top:8px;
-}
+  ul.resp li:first-child {
+    margin-top:8px;
+  }
 
-
+  .button {
+    margin:0 auto;
+  }
 
 }
 
