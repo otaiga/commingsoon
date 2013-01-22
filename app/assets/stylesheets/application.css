@@ -161,6 +161,53 @@
   
 }
 
+/* SIDEBAR */
+
+#left-sidebar  {
+    
+}
+.side-nav .active a {
+    color: #000000;
+}
+.sidebar .sidebar-block {
+    margin-bottom: 35px;
+    clear: both;
+    overflow: hidden;
+}
+ .side-nav ul {
+    list-style: none;
+    margin-left: 0;
+}
+ .side-nav ul li {
+    margin-bottom: 8px;
+    overflow: hidden;
+    padding-bottom: 8px;
+}
+
+
+.side-nav ul li a {
+    background: url("/assets/left_nav_bullets.png") no-repeat scroll 0 8px transparent;
+    padding-left: 2px;
+    display: inline-block;
+    font-size: 13px;
+    color:#FFFFFF;
+}
+.side-nav ul li a:hover {
+    text-decoration: none;
+    color: #333333;
+}
+
+.sidebar {
+    
+}
+.sidebar h2 {
+    border-bottom: 3px solid #cccccc;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+}
+
+/*Sidebars End*/
+
 /* Adding in styling for autocomplete gem */
 
 li.ui-menu-item {
@@ -472,3 +519,10 @@ ul#linkRight li, ul#linkLeft li  {
 
 
 }
+
+@media (-webkit-min-device-pixel-ratio: 2)  { 
+   .pull-left {
+
+   }
+
+   }
