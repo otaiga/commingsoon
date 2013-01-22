@@ -16,6 +16,5 @@
 /config/config.yml
 /config/provision/puppet/extdata/*
 /config/provision/puppet/modules/comingsoon/files/*
-/config/initializers/secret_token.rb
 
 .DS_Store
