@@ -4,4 +4,8 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Comingsoon::Application.config.secret_token = 'aa8894ea1a6579ea1872db9e143fc2c84416cd8911c7afcb0b0855b8d86918660dc24dfcac44138f767eee3564e2b7058a4fa0223d60ffc17e0de5d8632459c4'
+
+# using made up string for development and test
+string = ""
+30.times {string += (("a".."z").to_a << ("1".."30").to_a).flatten.sample}
+Comingsoon::Application.config.secret_token = string

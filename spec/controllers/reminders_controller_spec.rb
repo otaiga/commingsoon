@@ -14,6 +14,7 @@ describe RemindersController do
   end
 
   it "should create reminder" do
+    request.env["HTTP_REFERER"] = root_path
     post :create, title_id: given_movie.title_id
     response.should redirect_to root_path
     given_user.reminders.count.should == 1

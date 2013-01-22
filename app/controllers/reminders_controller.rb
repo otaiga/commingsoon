@@ -10,9 +10,9 @@ class RemindersController < ApplicationController
     movie_title_id = params[:title_id]
     reminder = current_user.reminders.new(movie_title_id: movie_title_id)
     if reminder.save
-      redirect_to root_path, :notice => "The movie has been added to your reminders list"
+      redirect_to :back, :notice => "The movie has been added to your reminders list"
     else
-      redirect_to root_path, :alert => "There was an issue adding the movie to your reminders list"
+      redirect_to :back, :alert => "There was an issue adding the movie to your reminders list"
     end
   end
 

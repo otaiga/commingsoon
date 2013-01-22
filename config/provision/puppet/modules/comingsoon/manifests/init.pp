@@ -73,6 +73,14 @@ class comingsoon {
     source => "puppet:///modules/comingsoon/config.yml"
   }
 
+  file {"${app_dir}shared/config/secret_token.rb":
+    owner => "${user}",
+    group => "${user}",
+    mode => 775,
+    require => File[shared_config_directory],
+    source => "puppet:///modules/comingsoon/secret_token.rb"
+  }
+
   # this key was generated from the file.pem file:
   #  ssh-keygen -y -f file.pem
   ssh_authorized_key { "comingsoon.pem.pub":
