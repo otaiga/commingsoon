@@ -48,6 +48,12 @@ namespace :deploy do
       run "cp #{shared_path}/config/config.yml #{latest_release}/config/"
   end
 
+# copy secret_token from shared dir.
+  desc "Copy the secret_token.rb file into the latest release"
+  task :copy_in_secret_token do
+      run "cp #{shared_path}/config/secret_token.rb #{latest_release}/config/initializers/"
+  end
+
 # Create DBs
   desc "Create the databases"
   task :create_db, :roles => :db do
@@ -57,5 +63,8 @@ namespace :deploy do
 end
 
 after "deploy:update_code", "deploy:copy_in_config_yml"
+after "deploy:update_code", "deploy:copy_in_secret_token"
 before "deploy:migrate", "deploy:copy_in_config_yml"
 before "deploy:assets:precompile", "deploy:copy_in_config_yml"
+before "deploy:migrate", "deploy:copy_in_secret_token"
+before "deploy:assets:precompile", "deploy:copy_in_secret_token"
