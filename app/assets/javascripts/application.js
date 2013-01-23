@@ -16,3 +16,8 @@
 //= require twitter/bootstrap
 //= require autocomplete-rails
 //= require_tree .
+
+
+$(document).ready(function() {
+$('#dateNav').scrollspy()
+});

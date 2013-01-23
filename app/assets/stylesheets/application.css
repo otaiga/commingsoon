@@ -208,6 +208,26 @@
 
 /*Sidebars End*/
 
+/* SCROLLSPY NAV */
+
+#dateNav{
+    position: fixed;
+    top: 0; left: 20px;
+    width: 100%;
+    background:none;
+    text-align:center;
+}
+
+#dateNav ul.dateNav li > a {
+  display:none;
+}
+
+#datenav ul.dateNav li.active > a{
+    display:inline-block;
+    color: red;
+    text-decoration: underline;
+}
+
 /* Adding in styling for autocomplete gem */
 
 li.ui-menu-item {

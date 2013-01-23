@@ -3,16 +3,16 @@
     <div id="left-sidebar" class="span3 sidebar">
       <div class="side-nav sidebar-block">
         <h3 class="resultTitle fontSize13">Release Dates</h2>
-        <ul>
+        <ul class="date">
           <% @response.each_pair do |date, movie| %>
-          <li><i class="icon-chevron-right"></i><%= link_to_function date_format(date), "$('html, body').animate({scrollTop:$('##{date}').offset().top }, 'slow');", :class => 'scroll_to'%></li>
+          <li><i class="icon-chevron-right"></i><%= link_to date_format(date), "#d_#{date}", :id=> '#d_#{date}', :class => 'scroll_to' %></li>
         <% end %>
         </ul>
       </div>
     </div>
     <div class="span9">
       <% @response.each_pair do |date, movie| %>
-        <h3 class="resultTitle fontSize13" id="<%= date %>">Available on&nbsp;<%= date_format(date) %></h3>
+        <h3 class="resultTitle fontSize13" id="d_<%= date %>">Available on&nbsp;<%= date_format(date) %></h3>
         <% movie.each do |m| %>
           <div class="thumbnail clearfix">
             <img class="pull-left" src=<% if m.image_link %> <%= m.image_link %> <% else %> "/assets/noimage.jpg" <% end %>>

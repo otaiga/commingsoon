@@ -32,4 +32,15 @@
       </div>
     </div>
   </div>
+  <div class="container">
+  <div class="row">
+    <div class="span12">
+       <div id="dateNav">
+        <ul class="dateNav">
+          <li><% @response.each_pair do |date, movie| %><%= link_to date_format(date), "#d_#{date}" %><% end %></li>
+        </ul>
+    </div>
+    </div>
+  </div>
+</div>
 </header>
