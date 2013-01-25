@@ -166,14 +166,10 @@
 #left-sidebar  {
     
 }
-.side-nav .active a {
-    color: #000000;
+#dateNav .active a {
+    color: #FFBE00;
 }
-.sidebar .sidebar-block {
-    margin-bottom: 35px;
-    clear: both;
-    overflow: hidden;
-}
+
  .side-nav ul {
     list-style: none;
     margin-left: 0;
@@ -211,22 +207,21 @@
 /* SCROLLSPY NAV */
 
 #dateNav{
+    height: auto;
+    left: 78%;
     position: fixed;
-    top: 0; left: 20px;
-    width: 100%;
-    background:none;
-    text-align:center;
+    top: 138px;
+    width: auto;
 }
 
-#dateNav ul.dateNav li > a {
-  display:none;
+
+#spyOnThis {
+  height:100%;
+  overflow:auto;
+  
 }
 
-#datenav ul.dateNav li.active > a{
-    display:inline-block;
-    color: red;
-    text-decoration: underline;
-}
+
 
 /* Adding in styling for autocomplete gem */
 
@@ -282,6 +277,13 @@ table.reminder td {
 
 /* FOOTER */
 
+#footer {
+height: 50px;
+bottom: 0;
+width: 100%;
+background-color: #333333;
+}
+
 
 ul#linkLeft {
   
@@ -323,7 +325,7 @@ ul#linkRight li  {
 
 
   .thumbnail.clearfix > img.pull-left {
-    float:none;
+    float:left;
     margin: 10px auto;
   }
 
@@ -333,11 +335,12 @@ ul#linkRight li  {
 }
 
 .smallTitle {
-  display: block;
+  display: inline-block;
 }
 
 .resultTitle {
-  display:block;
+  display:inline-block;
+  text-align: left;
 }
 
 .button {
@@ -437,6 +440,24 @@ ul#linkRight {
   width:100%;
   margin:0 auto;
 }
+
+
+/* SCROLLSPY */
+
+
+
+.side-nav ul li {
+    display: none;
+    margin-bottom: 8px;
+    overflow: hidden;
+    padding-bottom: 8px;
+}
+
+.side-nav ul li.active {
+   display:inline-block;
+   color:red;
+}
+
 
 
   /* Home Page */

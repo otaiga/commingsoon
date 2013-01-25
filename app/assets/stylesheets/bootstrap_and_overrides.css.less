@@ -31,20 +31,13 @@
 // Example:
 // @linkColor: #ff0000;
 
-    html, body {
-    height: 100%;
-    }
-     
-    #wrap {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -20px;
-    }
-    #push,
-    #footer {
-    height: 20px;
-    }
+#wrap {
+  margin-bottom:90px;
+}
+
+#push {
+  heignt:50px;
+}
 
 body {
   background:#46494F;
@@ -53,6 +46,7 @@ body {
 a {
     font-family:'BebasRegular';
     word-spacing:3px;
+    color:#FFFFFF;
 }
 
 a:hover {
@@ -73,9 +67,7 @@ header {
   padding-bottom:10px;
 }
 
-footer {
-  background:#242426;
-}
+
 
 select {
   margin-top:10px;
@@ -192,6 +184,10 @@ li [class^="icon-"], li [class*="icon-"] {
     padding-right: 20px;
 }
 
+.nav > li > a {
+  display:inline;
+}
+
 .navbar .nav > li > a {
     color: #F2F9F9;
     float: right;
@@ -203,6 +199,7 @@ li [class^="icon-"], li [class*="icon-"] {
 
 .navbar .nav > li > a:hover {
     color: #FFBE00;
+    background-color:none;
 }
 
 .nav-collapse .nav > li > a:hover {
@@ -210,6 +207,11 @@ li [class^="icon-"], li [class*="icon-"] {
   background:#242426;
 }
 
+.nav > li > a:hover {
+    color: #FFBE00;
+    background-color: #46494F;
+    text-decoration: none;
+}
 
 .navbar .btn-navbar {
     background-color: #FFBE00;

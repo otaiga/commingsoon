@@ -19,5 +19,5 @@
 
 
 $(document).ready(function() {
-$('#dateNav').scrollspy()
+ $(window).scrollspy({wrap: $('#spyOnThis')[-300]});
 });
