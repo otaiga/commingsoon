@@ -14,9 +14,9 @@
   </div>
 
 
-    <div class="container">
+    <div class="container mt225">
       <div class="row">
-    <div class="span9" id="spyOnThis">
+    <div class="span8 offset2" id="spyOnThis">
        <% @response.each_pair do |date, movie| %>
         <h3 class="resultTitle fontSize13" id="d_<%= date %>">Available on&nbsp;<%= date_format(date) %></h3>
         <% movie.each do |m| %>

@@ -37,6 +37,10 @@
   margin-top:20px;
 }
 
+.mt225 {
+  margin-top:180px;
+}
+
 
 .center {
   text-align: center;
@@ -207,11 +211,13 @@
 /* SCROLLSPY NAV */
 
 #dateNav{
-    height: auto;
-    left: 78%;
-    position: fixed;
-    top: 138px;
-    width: auto;
+  background:#242426;
+    text-align:center;
+    width: 100%;
+    position:fixed;
+    left:0;
+    top:91px;
+
 }
 
 
@@ -220,6 +226,12 @@
   overflow:auto;
   
 }
+
+.nav li > a {
+  display:inline;
+}
+
+ 
 
 
 

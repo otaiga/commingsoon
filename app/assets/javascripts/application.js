@@ -19,5 +19,5 @@
 
 
 $(document).ready(function() {
- $(window).scrollspy({wrap: $('#spyOnThis')[-300]});
+ $(window).scrollspy({wrap: $('#spyOnThis')[-600]});
 });

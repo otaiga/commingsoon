@@ -58,13 +58,19 @@ ul {
   list-style-type:none;
 }
 
+li {
+  display:inline-block;
+}
+
  h3 {
     line-height: 30px;
 }
 
 header {
   background:#242426;
-  padding-bottom:10px;
+  position:fixed;
+  top:40px;
+  width:100%;
 }
 
 
@@ -238,6 +244,10 @@ li [class^="icon-"], li [class*="icon-"] {
 .navbar .btn-navbar:active {
   background-color: #FFBE00;
   background: #FFBE00;
+}
+
+.navbar-fixed-top .navbar-inner, {
+  box-shadow:none;
 }
 
 @media all and (max-width: 979px) {
