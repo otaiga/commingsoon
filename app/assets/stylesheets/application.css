@@ -38,7 +38,7 @@
 }
 
 .mt65 {
-  margin-top:65px;
+  margin-top:75px;
 }
 
 
@@ -236,6 +236,10 @@
   padding:5px;
 }
 
+#dateNav ul.nav li a:hover{
+  background-color:#242426;
+}
+
 
 #spyOnThis {
   height:100%;
@@ -243,9 +247,6 @@
   
 }
 
-.nav li > a {
-  display:inline;
-}
 
  
 
@@ -317,21 +318,22 @@ ul#linkLeft {
   
 }
 
-ul#linkLeft li {
+#footer ul#linkLeft li {
   text-align:left;
   margin-top:15px;
 }
 
-ul#linkRight {
+#footer ul#linkRight {
+  text-align:right;
   
 
 }
 
-ul#linkRight li a , ul#linkLeft li a {
+#footer ul#linkRight li a , #footer ul#linkLeft li a {
   color:#FFBE00;
 }
 
-ul#linkRight li  {
+#footer ul#linkRight li  {
   text-align:right;
   margin-top:15px;
 }
@@ -387,7 +389,7 @@ ul#linkRight li  {
     margin-right:-25px;
   }
 
-header, footer{
+header, #footer{
   margin-left:-25px;
   margin-right:-25px;
 }
@@ -573,16 +575,22 @@ li.resp1{
 
 /* FOOTER */
 
-ul#linkLeft, ul#linkRight {
+#footer {
+  margin:0 auto;
+  padding:0px;
+  text-align: center;
+}
+
+#footer ul#linkLeft, #footer ul#linkRight {
   margin:0px;
 }
 
 
-ul#linkRight li a , ul#linkLeft li a {
+#footer ul#linkRight li a , ul#footer #linkLeft li a {
   font-size:0.875em;
 }
 
-ul#linkRight li, ul#linkLeft li  {
+#footer ul#linkRight li, #footer ul#linkLeft li  {
   text-align:center;
 }
 
