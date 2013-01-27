@@ -168,7 +168,7 @@ li [class^="icon-"], li [class*="icon-"] {
     color: #FFBE00;
 }
 .navbar {
-    margin-bottom:0px;
+    position:fixed;
     overflow: visible;
 }
 
@@ -272,12 +272,17 @@ li [class^="icon-"], li [class*="icon-"] {
    .nav-collapse .nav > li > a:hover, .nav-collapse .dropdown-menu a:hover {
     background-color: #242426;
     }
-   
+
+    .navbar-fixed-top .navbar-inner {
+    padding: 5px 25px 5px 5px;
+}
+
 
    .navbar .nav {
     margin-top:15px;
     float:none;
     display:block;
+    text-align:center;
    }
 
    .navbar .nav > li {
@@ -300,7 +305,7 @@ li [class^="icon-"], li [class*="icon-"] {
    width:70%;
   }
 
-  header, footer {
+  header {
   margin-left:-20px;
   margin-right:-20px;
   }

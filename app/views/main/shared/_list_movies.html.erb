@@ -1,22 +1,6 @@
-<div class="container">
-  <div class="row">
-    <div class="span12">
-        <div id="dateNav">
-        <h3 class="resultTitle fontSize13">Release Dates</h3>
-        <ul class="nav date">
-          <% @response.each_pair do |date, movie| %>
-          <li><%= link_to date_format(date), "#d_#{date}", :id=> '#d_#{date}' %></li>
-        <% end %>
-        </ul>
-      </div>
-      </div>
-    </div>
-  </div>
-
-
-    <div class="container mt65">
+    <div class="container">
       <div class="row">
-    <div class="span8 offset2" id="spyOnThis">
+    <div class="span8 offset2">
        <% @response.each_pair do |date, movie| %>
         <h3 class="resultTitle fontSize13" id="d_<%= date %>">Available on&nbsp;<%= date_format(date) %></h3>
         <% movie.each do |m| %>
@@ -40,10 +24,3 @@
 <div id="searchWrapper">
        <a id="up" class="links" href="#">Back To Top</a>
       </div>
-<script>
-
-  $('.navbar').hide();
-  $('#header').hide();
-
-
-</script>

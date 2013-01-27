@@ -14,6 +14,7 @@
       <div class="nav-collapse collapse">
         <!-- .nav, .navbar-search, .navbar-form, etc -->
         <ul class="nav">
+          <li><%= link_to 'Home', root_path %></li>
           <li><%= link_to "Reminders", reminders_path, :class => "links" unless !current_user %></li>
           <li><%= link_to "Account", edit_user_registration_path, :class => "links" unless !current_user %></li>
           <li><%= display_login  %></li>
@@ -24,6 +25,7 @@
   </div>
 </div>
 
+<div id="topDivPush"></div>
 <header id ="header">
   <div class="container">
     <div class="row ">

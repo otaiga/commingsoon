@@ -27,6 +27,12 @@
 
 /* General */
 
+#topDivPush {
+    height: 30px;
+    width: 100%;
+}
+
+
 
 .mb20{
   margin-bottom:20px;
@@ -207,11 +213,11 @@
 
 #dateNav{
   background:#242426;
-    text-align:center;
-    width: 100%;
-    position:fixed;
-    left:0;
-    top:0px;
+  text-align:center;
+  width: 100%;
+  position:fixed;
+  left:0;
+  top:40px;
 
 }
 
@@ -306,8 +312,8 @@ table.reminder td {
 
 /* FOOTER */
 
-#footer {
-height: 50px;
+footer {
+height: auto;
 bottom: 0;
 width: 100%;
 background-color: #333333;
@@ -318,22 +324,20 @@ ul#linkLeft {
   
 }
 
-#footer ul#linkLeft li {
+#linkLeft li {
   text-align:left;
   margin-top:15px;
 }
 
-#footer ul#linkRight {
-  text-align:right;
-  
-
+#linkRight {
+  ;
 }
 
-#footer ul#linkRight li a , #footer ul#linkLeft li a {
+ ul#linkRight li a ,  ul#linkLeft li a {
   color:#FFBE00;
 }
 
-#footer ul#linkRight li  {
+ #linkRight li  {
   text-align:right;
   margin-top:15px;
 }
@@ -389,7 +393,7 @@ ul#linkLeft {
     margin-right:-25px;
   }
 
-header, #footer{
+header{
   margin-left:-25px;
   margin-right:-25px;
 }
@@ -409,6 +413,13 @@ ul#linkRight {
 
 }
 @media all and (max-width: 480px) {
+
+  #topDivPush {
+    height: 80px;
+    background:#242426;
+    width:480px;
+    margin-left:-20px;
+}
 
   .smallTitle {
     display:inline-block;
@@ -460,9 +471,18 @@ ul#linkRight {
     margin:0 auto;
   }
 
+  
+
 }
 
 @media all and (max-width: 320px) {
+
+  #topDivPush {
+    height: 80px;
+    background:#242426;
+    width:320px;
+    margin-left:-20px;
+}
 
   /* NAVIGATION BAR */
 
@@ -575,22 +595,17 @@ li.resp1{
 
 /* FOOTER */
 
-#footer {
-  margin:0 auto;
-  padding:0px;
-  text-align: center;
-}
 
-#footer ul#linkLeft, #footer ul#linkRight {
+ #linkLeft, #linkRight {
   margin:0px;
 }
 
 
-#footer ul#linkRight li a , ul#footer #linkLeft li a {
+#linkRight li a ,  #linkLeft li a {
   font-size:0.875em;
 }
 
-#footer ul#linkRight li, #footer ul#linkLeft li  {
+ #linkRight li, #linkLeft li  {
   text-align:center;
 }
 
