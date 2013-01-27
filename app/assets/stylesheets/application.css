@@ -37,8 +37,8 @@
   margin-top:20px;
 }
 
-.mt225 {
-  margin-top:180px;
+.mt65 {
+  margin-top:65px;
 }
 
 
@@ -185,13 +185,7 @@
 }
 
 
-.side-nav ul li a {
-    background: url("/assets/left_nav_bullets.png") no-repeat scroll 0 8px transparent;
-    padding-left: 2px;
-    display: inline-block;
-    font-size: 13px;
-    color:#FFFFFF;
-}
+
 
 .side-nav ul li a:hover {
     text-decoration: none;
@@ -217,8 +211,29 @@
     width: 100%;
     position:fixed;
     left:0;
-    top:91px;
+    top:0px;
 
+}
+
+#dateNav ul.nav  {
+  margin-bottom:0px;
+  text-align:center;
+}
+
+#dateNav ul.nav li {
+  padding:0px;
+  display:block;
+}
+
+#dateNav ul.nav li a {
+  font-size: 13px;
+  display:none;
+}
+
+#dateNav ul.nav li.active a {
+  color:#FFBE00;
+  display:block;
+  padding:5px;
 }
 
 

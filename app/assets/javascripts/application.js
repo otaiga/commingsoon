@@ -17,7 +17,10 @@
 //= require autocomplete-rails
 //= require_tree .
 
-
+// Scrollspy
 $(document).ready(function() {
  $(window).scrollspy({wrap: $('#spyOnThis')[-250]});
 });
+
+// Header
+
